@@ -1,0 +1,23 @@
+{
+  "name": "crom-markdown-editor-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "keywords": [],
+  "author": "MrJ",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.4.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.crom.markdown-editor-app",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  }
+}

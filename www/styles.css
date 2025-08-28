@@ -1,0 +1,39 @@
+:root {
+  --border: #e5e7eb;
+  --muted: #6b7280;
+}
+html, body, #app { height: 100%; }
+body { font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#fff; color:#111; }
+.panels { height: calc(100vh - 56px); overflow: hidden; }
+.sidebar { border-right: 1px solid var(--border); overflow-y: auto; }
+.editor-area, .preview-area { height: 100%; overflow: auto; background:#fff; }
+.editor-textarea { width:100%; height: calc(100% - 45px); border:0; resize:none; padding:1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Space Mono", monospace; line-height:1.5; background:inherit; }
+.file-tree li { margin: 2px 0; }
+.file-tree .item { display:flex; gap:8px; align-items:center; padding:6px 8px; border-radius:6px; cursor:default; }
+.file-tree .item:hover { background:#f7f7f7; }
+.file-tree .name { flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.file-tree .actions { visibility:hidden; gap:4px; }
+.file-tree .item:hover .actions { visibility:visible; }
+.file-tree .folder > .item { font-weight:600; }
+.icon { width:18px; text-align:center; color:#555; }
+.drag-over { outline:2px dashed #0d6efd; outline-offset:2px; }
+.hide { display:none !important; }
+#rawHtml { background:#0b0b0b; color:#e5e7eb; margin:0; height: calc(100% - 45px); overflow:auto; }
+.badge.text-bg-warning { background:#f59e0b !important; }
+@media (max-width: 767px) {
+  .sidebar { order:1; height:auto; max-height:35vh; }
+  #editorPanel { order:2; }
+  #previewPanel { order:3; }
+}
+
+body.dark { background:#0f1115; color:#e5e7eb; }
+body.dark .sidebar, body.dark .editor-area, body.dark .preview-area { background:#0f1115; }
+body.dark .sidebar { border-right-color:#23262d; }
+body.dark .file-tree .item:hover { background:#151923; }
+body.dark .navbar, body.dark .border-bottom { border-color:#23262d !important; }
+body.dark #rawHtml { background:#0b0d12; color:#cbd5e1; }
+body.dark .navbar { background:#0f1115 !important; }
+body.dark .ai-bar { background:#0f1115; border-bottom:1px solid #23262d; }
+body.dark .ai-bar .form-control { background:#0b0d12; color:#e5e7eb; border-color:#23262d; }
+body.dark .editor-textarea { background:#0f1115; color:#e5e7eb; }
+body.dark .preview-area { background:#0f1115; }
